@@ -1,0 +1,40 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <button type="button" class="btn btn-primary">
+            <a class="nav-link active" aria-current="page" href="{% url 'college_app:login' %}">Login</a>
+          </button>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{% url 'college_app:register' %}">Register</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Department
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Computer_science">Computer Science</a></li>
+            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Science">Science</a></li>
+            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Electronics">Electronics</a></li>
+            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Commerce">Commerce</a></li>
+            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Humanities">Humanities</a></li>
+          </ul>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+</nav>
+{% block content %}
+  <div><br>
+      <img src="{% static 'img/banner.png' %}" width="1295px;" height="600px;">
+  </div>
+{% endblock %}
